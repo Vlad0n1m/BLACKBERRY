@@ -1,10 +1,14 @@
-
-
+import Container from "../components/Container/Container";
+import Navbar from "../components/Navbar/Navbar";
+import Header from "../components/Header/Header";
 const Index = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">BLACKБЕРРИ</h1>
-    </div>
+    <Container>
+      <div className="flex flex-col gap-[20px] sm:gap-[80px]">
+        <Navbar />
+        <Header />
+      </div>
+    </Container>
   );
 };
 

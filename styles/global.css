@@ -1,3 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @font-face {
+  font-family: "Gilroy-Regular";
+  src: url("/fonts/Gilroy-Black.ttf") format("truetype"); 
+  /* src: url("/fonts/Gilroy-Bold.ttf") format("truetype"); 
+  src: url("/fonts/Gilroy-ExtraBold.ttf") format("truetype"); 
+  src: url("/fonts/Gilroy-Heavy.ttf") format("truetype"); 
+  src: url("/fonts/Gilroy-Medium.ttf") format("truetype"); 
+  src: url("/fonts/Gilroy-Regular.ttf") format("truetype"); 
+  src: url("/fonts/Gilroy-Semibold.ttf") format("truetype"); 
+  src: url("/fonts/Gilroy-Thin.ttf") format("truetype"); 
+} */
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-ExtraBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Black.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+#__next {
+  @apply w-full flex justify-center items-center flex-col;
+}
+#container > * {
+  @apply w-full;
+}
+#text-shadow {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#radial {
+  background: radial-gradient(
+      47.46% 283.14% at 50% 54.58%,
+      rgba(26, 26, 26, 0) 0%,
+      rgba(29, 29, 29, 0.86) 100%
+    ),
+    url(/images/header-bg.webp), #000000;
+  @apply rounded-lg p-[10px] sm:p-[15px] bg-center;
+}
+
+* {
+  font-family: "Gilroy";
+  transition: all 0.4s;
+}
+
+body {
+  background: #121212;
+}
