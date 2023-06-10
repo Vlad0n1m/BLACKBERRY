@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Header from "../components/Header/Header";
 import HeaderNav from "../components/HeaderNav/HeaderNav";
 import ProductCard from "../components/ProductCard/ProductCard";
+import LocationBlock from "../components/LocationBlock/LocationBlock";
 const Index = () => {
   return (
     <Container>
@@ -12,6 +13,7 @@ const Index = () => {
         <HeaderNav />
       </div>
       <ProductCard />
+      <LocationBlock />
     </Container>
   );
 };
