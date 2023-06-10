@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <div
-      id="radial"
+      id="radial-header"
       className="rounded-lg p-[10px] sm:p-[15px] min-h-[450px] sm:min-h-[480px] flex flex-col justify-between"
     >
       <div className="flex flex-row justify-between items-start">
@@ -110,7 +110,7 @@ export default function Header() {
         {" "}
         <a
           href=""
-          className="object-scale-down  rounded-lg w-[100%] aspect-square bg-center sm:w-[160px] sm:h-[160px] flex flex-col items-start justify-end sm:p-[11px] p-[10px] font-[600] sm:text-[32px] text-[16px] leading-[14.4px] sm:leading-[29px] text-white bg-[url('/images/header-card-1.webp')]"
+          className="object-scale-down hover:translate-y-12  rounded-lg w-[100%] aspect-square bg-center sm:w-[160px] sm:h-[160px] flex flex-col items-start justify-end sm:p-[11px] p-[10px] font-[600] sm:text-[32px] text-[16px] leading-[14.4px] sm:leading-[29px] text-white bg-[url('/images/header-card-1.webp')]"
         >
           готовим
           <br />
@@ -118,7 +118,7 @@ export default function Header() {
         </a>
         <a
           href=""
-          className="object-contain rounded-lg w-[100%] aspect-square bg-center sm:w-[160px] sm:h-[160px] flex flex-col items-start justify-end sm:p-[11px] p-[10px] font-[600] sm:text-[32px] text-[16px] leading-[14.4px] sm:leading-[29px] text-white bg-[url('/images/header-card-2.webp')]"
+          className="object-contain hover:translate-y-12 rounded-lg w-[100%] aspect-square bg-center sm:w-[160px] sm:h-[160px] flex flex-col items-start justify-end sm:p-[11px] p-[10px] font-[600] sm:text-[32px] text-[16px] leading-[14.4px] sm:leading-[29px] text-white bg-[url('/images/header-card-2.webp')]"
         >
           bb
           <br />
@@ -126,7 +126,7 @@ export default function Header() {
         </a>
         <a
           href=""
-          className="object-contain rounded-lg w-[100%] aspect-square bg-center sm:w-[160px] sm:h-[160px] flex flex-col items-start justify-end sm:p-[11px] p-[10px] font-[600] sm:text-[32px] text-[16px] leading-[14.4px] sm:leading-[29px] text-white bg-[url('/images/header-card-3.webp')]"
+          className="object-contain hover:translate-y-12 rounded-lg w-[100%] aspect-square bg-center sm:w-[160px] sm:h-[160px] flex flex-col items-start justify-end sm:p-[11px] p-[10px] font-[600] sm:text-[32px] text-[16px] leading-[14.4px] sm:leading-[29px] text-white bg-[url('/images/header-card-3.webp')]"
         >
           мы
           <br />
