@@ -107,9 +107,9 @@ export default function Header() {
         </div>
       </div>
       <div className="flex flex-row gap-[5px] sm:gap-[20px] justify-end items-center">
-        {" "}
         <a
           href=""
+          id="shadow-down-brown"
           className="object-scale-down hover:translate-y-12  rounded-lg w-[100%] aspect-square bg-center sm:w-[160px] sm:h-[160px] flex flex-col items-start justify-end sm:p-[11px] p-[10px] font-[600] sm:text-[32px] text-[16px] leading-[14.4px] sm:leading-[29px] text-white bg-[url('/images/header-card-1.webp')]"
         >
           готовим
@@ -117,6 +117,7 @@ export default function Header() {
           vkusno!
         </a>
         <a
+          id="shadow-down-green"
           href=""
           className="object-contain hover:translate-y-12 rounded-lg w-[100%] aspect-square bg-center sm:w-[160px] sm:h-[160px] flex flex-col items-start justify-end sm:p-[11px] p-[10px] font-[600] sm:text-[32px] text-[16px] leading-[14.4px] sm:leading-[29px] text-white bg-[url('/images/header-card-2.webp')]"
         >
@@ -125,6 +126,7 @@ export default function Header() {
           station
         </a>
         <a
+          id="shadow-down-white"
           href=""
           className="object-contain hover:translate-y-12 rounded-lg w-[100%] aspect-square bg-center sm:w-[160px] sm:h-[160px] flex flex-col items-start justify-end sm:p-[11px] p-[10px] font-[600] sm:text-[32px] text-[16px] leading-[14.4px] sm:leading-[29px] text-white bg-[url('/images/header-card-3.webp')]"
         >

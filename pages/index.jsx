@@ -2,6 +2,7 @@ import Container from "../components/Container/Container";
 import Navbar from "../components/Navbar/Navbar";
 import Header from "../components/Header/Header";
 import HeaderNav from "../components/HeaderNav/HeaderNav";
+import ProductCard from "../components/ProductCard/ProductCard";
 const Index = () => {
   return (
     <Container>
@@ -10,6 +11,7 @@ const Index = () => {
         <Header />
         <HeaderNav />
       </div>
+      <ProductCard />
     </Container>
   );
 };

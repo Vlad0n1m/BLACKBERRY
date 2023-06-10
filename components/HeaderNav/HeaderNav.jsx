@@ -4,7 +4,7 @@ export default function HeaderNav() {
       <div className="flex gap-[8px] sm:justify-between w-full">
         <a
           id="radial"
-          className="hover:translate-y-[-10px] duration-500 w-full flex cursor-pointer flex-col items-start gap-[10px] py-[18px] px-[12px] sm:py-[30px] sm:px-[24px] text-white rounded-lg"
+          className="hover:translate-y-[-10px] duration-500 w-full flex cursor-pointer flex-col items-start gap-[20px] py-[18px] px-[12px] sm:py-[30px] sm:px-[24px] text-white rounded-lg"
         >
           <div className="flex justify-between w-full items-center  gap-[12px]">
             <h1 className="text-[18px] sm:text-[34px] leading-[13.2px] sm:leading-[17.6px]">
@@ -34,7 +34,7 @@ export default function HeaderNav() {
         </a>
         <a
           id="radial"
-          className="hover:translate-y-[-10px] duration-500 md:w-full flex cursor-pointer flex-col items-start gap-[10px] py-[18px] px-[12px] sm:py-[30px] sm:px-[24px] text-white rounded-lg"
+          className=" hover:translate-y-[-10px] duration-500 md:w-full flex cursor-pointer flex-col items-start gap-[20px] py-[18px] px-[12px] sm:py-[30px] sm:px-[24px] text-white rounded-lg"
         >
           <div className="flex justify-between w-full items-center  gap-[12px]">
             <h1 className="text-[18px] sm:text-[34px] leading-[13.2px] sm:leading-[17.6px]">
@@ -57,14 +57,14 @@ export default function HeaderNav() {
             </svg>
           </div>
           <p className="text-[12px] sm:text-[16px] leading-[22px] sm:leading-[25px]">
-            приготовленная лучшими мастерами
+            Приготовленная лучшими мастерами
           </p>
         </a>
       </div>
       <div className="flex gap-[8px]  sm:justify-between w-full">
         <a
           id="radial"
-          className="hover:translate-y-[-10px] duration-500 md:w-full flex cursor-pointer flex-col items-start gap-[10px] py-[18px] px-[12px] sm:py-[30px] sm:px-[24px] text-white rounded-lg"
+          className=" hover:translate-y-[-10px] duration-500 md:w-full flex cursor-pointer flex-col items-start gap-[20px] py-[18px] px-[12px] sm:py-[30px] sm:px-[24px] text-white rounded-lg"
         >
           <div className="flex justify-between w-full items-center  gap-[12px]">
             <h1 className="text-[18px] sm:text-[34px] leading-[13.2px] sm:leading-[17.6px]">
@@ -89,12 +89,12 @@ export default function HeaderNav() {
             </svg>
           </div>
           <p className="text-[12px] sm:text-[16px] leading-[22px] sm:leading-[25px]">
-            в том месте, где удобно!
+            В том месте, где удобно!
           </p>
         </a>
         <a
           id="radial"
-          className="hover:translate-y-[-10px] duration-500 w-full flex cursor-pointer flex-col items-start gap-[10px] py-[18px] px-[12px] sm:py-[30px] sm:px-[24px] text-white rounded-lg"
+          className=" hover:translate-y-[-10px] duration-500 w-full flex cursor-pointer flex-col items-start gap-[20px] py-[18px] px-[12px] sm:py-[30px] sm:px-[24px] text-white rounded-lg"
         >
           <div className="flex justify-between w-full items-center  gap-[12px]">
             <h1 className="text-[18px] sm:text-[34px] leading-[13.2px] sm:leading-[17.6px]">
@@ -141,7 +141,7 @@ export default function HeaderNav() {
             </svg>
           </div>
           <p className="text-[12px] sm:text-[16px] leading-[22px] sm:leading-[25px]">
-            который придает вкус каждому мнгновению
+            Который придает вкус каждому мнгновению
           </p>
         </a>
       </div>
