@@ -38,6 +38,7 @@
 }
 #__next {
   @apply w-full flex justify-center items-center flex-col;
+  overflow-x: hidden;
 }
 #container > * {
   @apply w-full;
