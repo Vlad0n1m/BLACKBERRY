@@ -9,6 +9,7 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
    theme: {
+
     screens: {
       sm: '601px',
       md: '1000px',
@@ -32,6 +33,7 @@ module.exports = {
       serif: ['Merriweather', 'serif'],
       gilroy: ['Gilroy', 'sans-serif'],
     },
+     
     extend: {
       spacing: {
         '128': '32rem',
@@ -39,6 +41,7 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
+        'lg': '20px',
       }
     }
   },
