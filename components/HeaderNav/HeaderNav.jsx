@@ -68,7 +68,7 @@ export default function HeaderNav() {
         >
           <div className="flex justify-between w-full items-center  gap-[12px]">
             <h1 className="text-[18px] sm:text-[34px] leading-[13.2px] sm:leading-[17.6px]">
-              Локации
+              м
             </h1>
             <svg
               width="15"

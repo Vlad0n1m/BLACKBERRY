@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 export default function Navbar() {
   return (
     <div className="flex items-center justify-between">
-      <h1 className="font-[500] text-white text-[28px] md:text-[40px] leading-[45px]">
+      <Link href="/" className="font-[500] text-white text-[28px] md:text-[40px] leading-[45px]">
         BLACKБЕРИ
-      </h1>
+      </Link>
       <a
         className="hidden text-black text-[16px] w-[180px] h-[40px] bg-white sm:flex justify-center items-center rounded-lg font-[500]"
         href="/"

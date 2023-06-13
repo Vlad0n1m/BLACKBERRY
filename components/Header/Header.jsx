@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Header() {
   return (
     <div
@@ -107,35 +108,35 @@ export default function Header() {
         </div>
       </div>
       <div className="flex flex-row gap-[5px] sm:gap-[20px] justify-end items-center">
-        <a
-          href=""
+        <Link
+          href="/"
           id="shadow-down-brown"
-          className="bg-cover hover:translate-y-12  rounded-lg w-[100%] aspect-square bg-center sm:w-[160px] sm:h-[160px] flex flex-col items-start justify-end sm:p-[11px] p-[10px] font-[600] sm:text-[32px] text-[16px] leading-[14.4px] sm:leading-[29px] text-white bg-[url('/images/header-card-1.webp')]"
+          className="bg-cover hover:translate-y-3 drop-shadow-2xl rounded-lg w-[100%] aspect-square bg-center sm:w-[160px] sm:h-[160px] flex flex-col items-start justify-end sm:p-[11px] p-[10px] font-[500] sm:text-[32px] text-[16px] leading-[14.4px] sm:leading-[29px] text-white bg-[url('/images/header-card-1.webp')]"
         >
           готовим
           <br />
           vkusno!
-        </a>
-        <a
+        </Link>
+        <Link
           id="shadow-down-green"
-          href=""
-          className="bg-cover  hover:translate-y-12 rounded-lg w-[100%] aspect-square bg-center sm:w-[160px] sm:h-[160px] flex flex-col items-start justify-end sm:p-[11px] p-[10px] font-[600] sm:text-[32px] text-[16px] leading-[14.4px] sm:leading-[29px] text-white bg-[url('/images/header-card-2.webp')]"
+          href="/"
+          className="bg-cover drop-shadow-2xl hover:translate-y-3 rounded-lg w-[100%] aspect-square bg-center sm:w-[160px] sm:h-[160px] flex flex-col items-start justify-end sm:p-[11px] p-[10px] font-[500] sm:text-[32px] text-[16px] leading-[14.4px] sm:leading-[29px] text-white bg-[url('/images/header-card-2.webp')]"
         >
           bb
           <br />
           station
-        </a>
-        <a
+        </Link>
+        <Link
           id="shadow-down-white"
-          href=""
-          className="bg-cover hover:translate-y-12 rounded-lg w-[100%] aspect-square bg-center sm:w-[160px] sm:h-[160px] flex flex-col items-start justify-end sm:p-[11px] p-[10px] font-[600] sm:text-[32px] text-[16px] leading-[14.4px] sm:leading-[29px] text-white bg-[url('/images/header-card-3.webp')]"
+          href="/resume"
+          className="bg-cover drop-shadow-2xl hover:translate-y-3 rounded-lg w-[100%] aspect-square bg-center sm:w-[160px] sm:h-[160px] flex flex-col items-start justify-end sm:p-[11px] p-[10px] font-[500] sm:text-[32px] text-[16px] leading-[14.4px] sm:leading-[29px] text-white bg-[url('/images/header-card-3.webp')]"
         >
           мы
           <br />
           ищем
           <br />
           тебя
-        </a>
+        </Link>
       </div>
     </div>
   );

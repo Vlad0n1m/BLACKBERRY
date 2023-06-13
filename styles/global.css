@@ -68,7 +68,7 @@
   @apply w-full;
 }
 #text-shadow {
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 1px 1px 15px rgb(0, 0, 0);
 }
 #radial-header {
   background: radial-gradient(

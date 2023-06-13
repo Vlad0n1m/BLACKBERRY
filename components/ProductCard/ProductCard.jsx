@@ -38,7 +38,9 @@ export default function ProductCard() {
             </div>
           </div>
           <div className="flex flex-col w-full gap-[10px]">
-            <h1 className="flex justify-center items-center bg-cover bg-no-repeat bg-center w-[100%] text-[32px] aspect-square rounded-lg bg-[url('/images/boison.webp')]">
+            <h1
+              className="flex justify-center items-center bg-cover bg-no-repeat bg-center w-[100%] text-[32px] aspect-square rounded-lg bg-[url('/images/boison.webp')]"
+            >
               boisson
             </h1>
             <div className="w-full bg-[#27272a] flex flex-col gap-[4px] rounded-lg  p-[12px]">

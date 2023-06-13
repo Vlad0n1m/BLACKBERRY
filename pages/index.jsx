@@ -8,9 +8,14 @@ import People from "../components/People/People";
 import Activivties from "../components/Activities/Activivties";
 import Form from "../components/Form/Form";
 import Footer from "../components/Footer/Footer";
+import Head from "next/head";
 const Index = () => {
   return (
     <Container>
+      <Head>
+      <title>BLACKБЕРРИ: Главная</title>
+
+      </Head>
       <div className="flex flex-col gap-[20px] sm:gap-[80px]">
         <Navbar />
         <Header />
@@ -20,8 +25,10 @@ const Index = () => {
       <LocationBlock />
       <People />
       <Activivties />
-      <Form />
-      <Footer/>
+      <div className="flex flex-col gap-[20px] sm:gap-[80px]">
+        <Form />
+        <Footer />
+      </div>
     </Container>
   );
 };

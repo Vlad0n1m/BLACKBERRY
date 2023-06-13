@@ -1,13 +1,30 @@
-import Header from "../Header/Header";
-import Navbar from "../Navbar/Navbar";
-
+import Head from "next/head";
 export default function Container({ children }) {
   return (
     <div
       id="container"
-      className=" w-[95%] max-w-[380px] sm:max-w-[945px] md:max-w-[1360px] my-[20px] md:my-[24px] flex flex-col gap-[60px] sm:gap-[120px] md:gap-[200px]"
+      className=" w-[95%] max-w-[380px] sm:max-w-[945px] md:max-w-[1360px] my-[20px] md:my-[24px] flex flex-col gap-[60px] sm:gap-[120px] md:gap-[200px] text-white"
     >
-     
+      <Head>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+      </Head>
       {children}
     </div>
   );

@@ -1,4 +1,32 @@
+import { useRef } from "react";
 export default function Form() {
+  const nameRef = useRef(null);
+  const phoneRef = useRef(null);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = {
+      name: nameRef.current.value,
+      phone: phoneRef.current.value,
+    };
+    console.log(event.target);
+    event.target.reset()
+    event.target[2].innerHTML = "Отправлено!"
+    sendToTelegram(data);
+  };
+  const sendToTelegram = (data) => {
+    const BOT_TOKEN = "5714870203:AAFuSUOXmFSC396MWCa68bf8DR5oUtixRuQ";
+    const CHAT_ID = "-1001941741315";
+    let message = `#перезвонить\n\n🥷 - ${data.name}\n\n☎️ - ${data.phone}`;
+
+    fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+      method: "POST",
+      headers: {
+        "X-Requested-With": "XMLHttpRequest",
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: `chat_id=${CHAT_ID}&text=${message}&parse_mode=html`,
+    });
+  };
   return (
     <div className=" rounded-lg flex flex-col bg-[#27272a] gap-[42px] text-white p-[18px]">
       <div className="flex gap-[30px] justify-between items-center">
@@ -30,26 +58,33 @@ export default function Form() {
           </defs>
         </svg>
       </div>
-      <div className="flex flex-col sm:flex-row items-center gap-[12px]">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col sm:flex-row items-center gap-[12px]"
+      >
         <div className="flex flex-col sm:flex-row  gap-[8px] w-full">
           <input
+            ref={nameRef}
             type="text"
             className="w-full sm:w-[40%] py-[12px] px-[16px] text-black bg-[#E9E9E9] text-[12px] rounded-lg"
             placeholder="Имя"
+            name="name"
           />
           <input
+            ref={phoneRef}
             type="phone"
             className="w-full sm:w-[40%] py-[12px] px-[16px] text-black bg-[#E9E9E9] text-[12px] rounded-lg"
             placeholder="Телефон"
+            name="phone"
           />
         </div>
         <button
+          type="submit"
           className=" flex text-black text-[16px] w-[100%] sm:w-[30%] h-[40px] bg-white justify-center items-center rounded-lg font-[500]"
-          href="/"
         >
           Позвоните мне
         </button>
-      </div>
+      </form>
     </div>
   );
 }
