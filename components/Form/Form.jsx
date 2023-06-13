@@ -69,6 +69,7 @@ export default function Form() {
             className="w-full sm:w-[40%] py-[12px] px-[16px] text-black bg-[#E9E9E9] text-[12px] rounded-lg"
             placeholder="Имя"
             name="name"
+            required
           />
           <input
             ref={phoneRef}
@@ -76,6 +77,7 @@ export default function Form() {
             className="w-full sm:w-[40%] py-[12px] px-[16px] text-black bg-[#E9E9E9] text-[12px] rounded-lg"
             placeholder="Телефон"
             name="phone"
+            required
           />
         </div>
         <button
