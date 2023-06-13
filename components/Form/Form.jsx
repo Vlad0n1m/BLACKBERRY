@@ -28,7 +28,7 @@ export default function Form() {
     });
   };
   return (
-    <div className=" rounded-lg flex flex-col bg-[#27272a] gap-[42px] text-white p-[18px]">
+    <div className=" rounded-lg flex flex-col bg-[#27272a] gap-[18px] text-white p-[18px]">
       <div className="flex gap-[30px] justify-between items-center">
         <h1 className="text-[19px] sm:text-[32px] font-[500]">
           Есть предложения или вопросы?

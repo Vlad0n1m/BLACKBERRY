@@ -3,7 +3,7 @@ export default function ProductCard() {
       <div className="flex-col md:flex-row flex gap-[8px] md:gap-[20px] md:justify-between text-white">
         <div className="w-full flex gap-[8px] md:gap-[20px] md:justify-between ">
           <div className="flex flex-col w-full gap-[10px]  ">
-            <h1 className="flex justify-center items-center bg-cover bg-no-repeat bg-center w-[100%] text-[32px] aspect-square rounded-lg bg-[url('/images/coffe.webp')]">
+            <h1 className="flex justify-center items-center bg-cover  md:text-[58px] bg-no-repeat bg-center w-[100%] text-[32px] aspect-square rounded-lg bg-[url('/images/coffe.webp')]">
               café
             </h1>
             <div className="w-full bg-[#27272a] flex flex-col gap-[4px] rounded-lg p-[12px]">
@@ -14,7 +14,7 @@ export default function ProductCard() {
             </div>
           </div>
           <div className="flex flex-col w-full gap-[10px]">
-            <h1 className="flex justify-center items-center bg-cover bg-no-repeat bg-center object-fill w-full text-[32px] aspect-square rounded-lg bg-[url('/images/cruasan.webp')]">
+            <h1 className="flex justify-center items-center bg-cover  md:text-[58px] bg-no-repeat bg-center object-fill w-full text-[32px] aspect-square rounded-lg bg-[url('/images/cruasan.webp')]">
               croissant
             </h1>
             <div className="w-full bg-[#27272a] flex flex-col gap-[4px] rounded-lg  p-[12px]">
@@ -27,7 +27,7 @@ export default function ProductCard() {
         </div>
         <div className="flex w-full  md:justify-between gap-[8px] md:gap-[20px]">
           <div className="flex flex-col w-full gap-[10px]">
-            <h1 className="flex justify-center items-center bg-cover bg-no-repeat bg-center w-[100%] text-[32px] aspect-square rounded-lg bg-[url('/images/lunch.webp')]">
+            <h1 className="flex justify-center items-center bg-cover  md:text-[58px] bg-no-repeat bg-center w-[100%] text-[32px] aspect-square rounded-lg bg-[url('/images/lunch.webp')]">
               nourriture
             </h1>
             <div className="w-full bg-[#27272a] flex flex-col gap-[4px] rounded-lg  p-[12px]">
@@ -39,7 +39,7 @@ export default function ProductCard() {
           </div>
           <div className="flex flex-col w-full gap-[10px]">
             <h1
-              className="flex justify-center items-center bg-cover bg-no-repeat bg-center w-[100%] text-[32px] aspect-square rounded-lg bg-[url('/images/boison.webp')]"
+              className="flex justify-center items-center bg-cover  md:text-[58px] bg-no-repeat bg-center w-[100%] text-[32px] aspect-square rounded-lg bg-[url('/images/boison.webp')]"
             >
               boisson
             </h1>

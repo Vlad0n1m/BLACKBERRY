@@ -8,7 +8,7 @@ export default function Header() {
       <div className="flex flex-row justify-between items-start">
         <h1
           id="text-shadow"
-          className="font-[700] text-[45px] sm:text-[60px] text-white"
+          className="font-[700] text-[45px] leading-[46px] sm:text-[60px] sm:leading-[61px] text-white"
         >
           MAKE
           <br />
