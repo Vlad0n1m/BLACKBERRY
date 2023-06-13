@@ -8,51 +8,49 @@ import Head from "next/head";
 import { useRef } from "react";
 
 export default function Resume() {
-     const nameRef = useRef(null);
-     const lastNameRef = useRef(null);
-     const ageRef = useRef(null);
-     const isWorkingRef = useRef(null);
-     const isEducatingRef = useRef(null);
-     const letterRef = useRef(null);
-     const expRef = useRef(null);
-     const roleRef = useRef(null);
-     const connectRef = useRef(null);
-     const phoneRef = useRef(null);
-     const nickRef = useRef(null);
-     const task1Ref = useRef(null);
-     const task2Ref = useRef(null);
-     const otherRef = useRef(null);
-     const buttonRef = useRef(null);
+  const nameRef = useRef(null);
+  const lastNameRef = useRef(null);
+  const ageRef = useRef(null);
+  const isWorkingRef = useRef(null);
+  const isEducatingRef = useRef(null);
+  const letterRef = useRef(null);
+  const expRef = useRef(null);
+  const roleRef = useRef(null);
+  const connectRef = useRef(null);
+  const phoneRef = useRef(null);
+  const nickRef = useRef(null);
+  const task1Ref = useRef(null);
+  const task2Ref = useRef(null);
+  const otherRef = useRef(null);
+  const buttonRef = useRef(null);
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-
-     const handleSubmit = (event) => {
-       event.preventDefault();
-
-       const data = {
-         name: nameRef.current.value,
-         lastName: lastNameRef.current.value,
-         age: ageRef.current.value,
-         letter: letterRef.current.value,
-         isworking: isWorkingRef.current.value,
-         iseducating: isEducatingRef.current.value,
-         exp: expRef.current.value,
-         role: roleRef.current.value,
-         connect: connectRef.current.value,
-         phone: phoneRef.current.value,
-         nick: nickRef.current.value,
-         task1: task1Ref.current.value,
-         task2: task2Ref.current.value,
-         other: otherRef.current.value,
-       };
-       event.target.reset();
-      //  buttonRef.innerHTML = "Отправлено!";
-       sendToTelegram(data);
-     };
-     const sendToTelegram = (data) => {
-       const BOT_TOKEN = "5714870203:AAFuSUOXmFSC396MWCa68bf8DR5oUtixRuQ";
-       const CHAT_ID = "-1001941741315";
-       let message = `📃💼 #резюме
+    const data = {
+      name: nameRef.current.value,
+      lastName: lastNameRef.current.value,
+      age: ageRef.current.value,
+      letter: letterRef.current.value,
+      isworking: isWorkingRef.current.value,
+      iseducating: isEducatingRef.current.value,
+      exp: expRef.current.value,
+      role: roleRef.current.value,
+      connect: connectRef.current.value,
+      phone: phoneRef.current.value,
+      nick: nickRef.current.value,
+      task1: task1Ref.current.value,
+      task2: task2Ref.current.value,
+      other: otherRef.current.value,
+    };
+    event.target.reset();
+    //  buttonRef.innerHTML = "Отправлено!";
+    sendToTelegram(data);
+  };
+  const sendToTelegram = (data) => {
+    const BOT_TOKEN = "5714870203:AAFuSUOXmFSC396MWCa68bf8DR5oUtixRuQ";
+    const CHAT_ID = "-1001941741315";
+    let message = `📃💼 #резюме
 
 Имя - ${data.name}
 Фамилия - ${data.lastName}
@@ -99,19 +97,56 @@ ${data.other}
 
 ➖➖➖➖➖➖➖`;
 
-       fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-         method: "POST",
-         headers: {
-           "X-Requested-With": "XMLHttpRequest",
-           "Content-Type": "application/x-www-form-urlencoded",
-         },
-         body: `chat_id=${CHAT_ID}&text=${message}&parse_mode=html`,
-       });
-     };
+    fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+      method: "POST",
+      headers: {
+        "X-Requested-With": "XMLHttpRequest",
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: `chat_id=${CHAT_ID}&text=${message}&parse_mode=html`,
+    });
+  };
   return (
     <Container>
       <Head>
-        <title>BLACKБЕРРИ: Работа</title>
+        <meta charSet="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+          name="apple-mobile-web-app-title"
+          content="BlackБери: Сеть кофеен"
+        />
+
+        <meta name="Author" content="BlackБери: Сеть кофеен" />
+        <meta name="referrer" content="always" />
+
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+
+        <title>Подача заявки на работу </title>
+
+        <meta property="og:locale" content="ru_KZ" />
+        <meta property="og:title" content="BlackБери: Сеть кофеен" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="BlackБери: Сеть кофеен" />
+
+        <meta
+          property="og:description"
+          content="кофе • выпечка • завтраки • ежедневно 8:00 — 22:00"
+        />
+
+        <meta
+          name="description"
+          content="кофе • выпечка • завтраки • ежедневно 8:00 — 22:00"
+        />
+        <meta
+          name="keywords"
+          content="кофе, выпечка, завтраки, ежедневнё, 8:00 — 22:00"
+        />
       </Head>
       <Navbar />
       <div className="w-full">

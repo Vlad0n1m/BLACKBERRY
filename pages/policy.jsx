@@ -9,7 +9,17 @@ export default function Policy() {
   return (
     <Container>
       <Head>
-        <title>BLACKБЕРРИ: Политика конфиденциальности</title>
+       <meta charSet="utf-8"/>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+      <meta name="mobile-web-app-capable" content="yes"/>
+      <meta name="apple-mobile-web-app-capable" content="yes"/>
+      <meta name="apple-mobile-web-app-title" content="BlackБери: Сеть кофеен"/>
+
+      <title> Политика Конфиденциальности </title>
+      <meta name="Author" content="BlackБери"/>
+      <meta name="referrer" content="always"/>
+      <meta name="googlebot" content="noindex" />
       </Head>
       <Navbar />
       <div className="flex items-center gap-[3%] text-white">
