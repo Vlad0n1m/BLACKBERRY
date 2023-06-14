@@ -122,3 +122,12 @@
 body {
   background: #121212;
 }
+
+input:focus::placeholder, textarea:focus::placeholder {
+  color:#000000;
+  opacity: 100%;
+}
+div:focus-within > p {
+  color: white !important;
+  opacity: 100% !important;
+}

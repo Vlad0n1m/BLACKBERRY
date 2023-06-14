@@ -169,10 +169,10 @@ ${data.other}
             <p className="text-[14px] opacity-50">Работаешь ли ты сейчас?</p>
             <select
               ref={isWorkingRef}
-              defaultValue="none"
+              defaultValue="Не выбрано"
               name="isWorking"
               id="isWorking"
-              className="cursor-pointer w-full py-[12px] px-[18px] sm:px-[36px] text-[14px] sm:text-[18px] text-black placeholder:opacity-50 bg-white rounded-lg"
+              className="cursor-pointer w-full py-[12px] px-[18px] sm:px-[36px] text-[14px] sm:text-[18px] text-black placeholder:opacity-50 bg-white block  p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50"
             >
               <option value="Да">Да</option>
               <option value="Нет">Нет</option>
@@ -183,7 +183,7 @@ ${data.other}
             <p className="text-[14px] opacity-50">Учишься?</p>
             <select
               ref={isEducatingRef}
-              defaultValue="none"
+              defaultValue="Не выбрано"
               name="isEducating"
               id="isEducating"
               className="cursor-pointer w-full py-[12px] px-[18px] sm:px-[36px] text-[14px] sm:text-[18px] text-black placeholder:opacity-50 bg-white rounded-lg"
@@ -205,7 +205,7 @@ ${data.other}
             <p className="text-[14px] opacity-50">Ваш опыт</p>
             <select
               ref={expRef}
-              defaultValue="none"
+              defaultValue="Не выбрано"
               name="isworking"
               id="isworking"
               className="cursor-pointer w-full py-[12px] px-[18px] sm:px-[36px] text-[14px] sm:text-[18px] text-black placeholder:opacity-50 bg-white rounded-lg"
@@ -214,14 +214,14 @@ ${data.other}
               <option value="Больше месяца">Больше месяца</option>
               <option value="Больше полугода">Больше полугода</option>
               <option value="Больше года">Больше года</option>
-              <option value="Не выбранно">Выберите</option>
+              <option value="Не выбрано">Выберите</option>
             </select>
           </div>
           <div className="flex flex-col gap-[8px] items-start w-full">
             <p className="text-[14px] opacity-50">Желаемая должность</p>
             <select
               ref={roleRef}
-              defaultValue="none"
+              defaultValue="Не выбрано"
               name="isworking"
               id="isworking"
               className="cursor-pointer w-full py-[12px] px-[18px] sm:px-[36px] text-[14px] sm:text-[18px] text-black placeholder:opacity-50 bg-white rounded-lg"
@@ -229,7 +229,7 @@ ${data.other}
               <option value="Кофемейкер">Кофемейкер</option>
               <option value="Круасанмейкер">Круасанмейкер</option>
               <option value="Кассир">Кассир</option>
-              <option value="Выберите">Выберите</option>
+              <option value="Не выбрано">Выберите</option>
             </select>
           </div>
         </div>
@@ -238,7 +238,7 @@ ${data.other}
             <p className="text-[14px] opacity-50">Способ связи</p>
             <select
               ref={connectRef}
-              defaultValue="none"
+              defaultValue="Не выбрано"
               name="connect"
               id="connect"
               className="cursor-pointer w-full py-[12px] px-[18px] sm:px-[36px] text-[14px] sm:text-[18px] text-black placeholder:opacity-50 bg-white rounded-lg"

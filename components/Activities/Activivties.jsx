@@ -6,14 +6,16 @@ export default function Activivties() {
         Что будем делать вместе?
       </h1>
       <div className="flex items-center justify-between gap-[10px]">
-        <h1
+        <Link
+          href="/franchise"
           id="shadow-down-brown text-shadow"
           className="cursor-pointer flex grow-[1] sm:grow-[2] justify-start text-[16px] sm:text-[33px] w-[90px] sm:w-[unset] md:text-[50px] font-[600] leading-[100%] items-end bg-[url('/images/franshisa.webp')] h-full  rounded-lg  max-h-[90px] sm:max-h-[300px] aspect-square sm:aspect-[unset] sm:min-h-[300px] bg-center bg-cover p-[5px] sm:p-[12px]"
         >
           наша <br />
           франшиза
-        </h1>
-        <h1
+        </Link>
+        <Link
+        href="/coop"
           id="shadow-down-green text-shadow"
           className="cursor-pointer flex grow-[1] justify-start text-[16px] sm:text-[33px] md:text-[50px] w-[90px] sm:w-[unset] leading-[100%] font-[600] items-end bg-[url('/images/collab.webp')] h-full  rounded-lg max-h-[90px] sm:max-h-[300px] aspect-square sm:aspect-[unset] sm:min-h-[300px] bg-center bg-cover p-[5px] sm:p-[12px]"
         >
@@ -22,9 +24,9 @@ export default function Activivties() {
           труд
           <br />
           ничество
-        </h1>
+        </Link>
         <Link
-        href="/resume"
+          href="/resume"
           id="shadow-down-white text-shadow"
           className="cursor-pointer flex grow-[1] justify-start text-[16px] sm:text-[33px] md:text-[50px] w-[90px] sm:w-[unset] font-[600] leading-[100%]  items-end bg-[url('/images/job.webp')] h-full  rounded-lg  max-h-[90px] sm:max-h-[300px] aspect-square sm:aspect-[unset] sm:min-h-[300px] bg-center bg-cover p-[5px] sm:p-[12px]"
         >
