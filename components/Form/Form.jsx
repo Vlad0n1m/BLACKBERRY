@@ -1,5 +1,5 @@
+import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { motion } from "framer-motion";
 export default function Form() {
   const nameRef = useRef(null);
   const phoneRef = useRef(null);
@@ -28,10 +28,16 @@ export default function Form() {
       body: `chat_id=${CHAT_ID}&text=${message}&parse_mode=html`,
     });
   };
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
-    <motion.div
-      initial={{ y: 100 }}
-      whileInView={{ y: 0 }}
+    <div
+    id="form"
+      ref={ref}
+      style={{
+        transform: isInView ? "none" : "translateY(50px)",
+        transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s",
+      }}
       className=" rounded-lg flex flex-col bg-[#27272a] gap-[18px] text-white p-[18px]"
     >
       <div className="flex gap-[30px] justify-between items-center">
@@ -92,6 +98,6 @@ export default function Form() {
           Позвоните мне
         </button>
       </form>
-    </motion.div>
+    </div>
   );
 }

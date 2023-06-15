@@ -1,15 +1,21 @@
 import Image from "next/image";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
+
 export default function LocationBlock() {
   const [ActiveTab, SetActive] = useState(1);
   const TabClicked = (index) => {
     SetActive(index);
   };
+      const ref = useRef(null);
+      const isInView = useInView(ref, { once: true });
   return (
-    <motion.div
-      initial={{ y: 100 }}
-      whileInView={{ y: 0 }}
+    <div ref={ref}
+      style={{
+        transform: isInView ? "none" : "translateY(100px)",
+        transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s",
+      }}
       className="flex flex-col gap-[20px] justify-center items-center"
     >
       <div className="w-full flex flex-col sm:flex-row gap-[16px] sm:justify-between text-white items-center">
@@ -110,6 +116,6 @@ export default function LocationBlock() {
           </p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

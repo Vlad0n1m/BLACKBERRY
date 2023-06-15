@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 export default function HeaderNav() {
   return (
-    <motion.div
-      initial={{ y: 100 }}
-      whileInView={{ y: 0 }}
+    <div
+    
       className="flex-col  sm:flex-row flex gap-[8px] sm:gap-[21px] text-white"
     >
       <div className="flex  w-full gap-[10px] md:gap-[21px]">
@@ -147,6 +146,6 @@ export default function HeaderNav() {
           </p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

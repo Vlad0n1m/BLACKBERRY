@@ -52,8 +52,8 @@ const Index = () => {
           content="кофе, выпечка, завтраки, ежедневнё, 8:00 — 22:00"
         />
       </Head>
+
       <div className="flex flex-col gap-[20px] sm:gap-[80px]">
-        <Navbar />
         <Header />
         <HeaderNav />
       </div>

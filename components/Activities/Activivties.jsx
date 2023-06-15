@@ -1,11 +1,17 @@
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 export default function Activivties() {
+   const ref = useRef(null);
+      const isInView = useInView(ref, { once: true });
   return (
-    <motion.div
-      initial={{ y: 100 }}
-      whileInView={{ y: 0 }}
+    <div
+      ref={ref}
+      style={{
+        transform: isInView ? "none" : "translateY(100px)",
+        transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s",
+      }}
       className="flex flex-col gap-[20px] text-white "
     >
       <h1 className="w-full text-center  text-[24px] sm:text-[48px] md:text-[54px] font-[500]">
@@ -43,6 +49,6 @@ export default function Activivties() {
           тебя
         </Link>
       </div>
-    </motion.div>
+    </div>
   );
 }

@@ -21,7 +21,6 @@ export default function Policy() {
       <meta name="referrer" content="always"/>
       <meta name="googlebot" content="noindex" />
       </Head>
-      <Navbar />
       <div className="flex items-center gap-[3%] text-white">
         <Link href="/">
           <svg

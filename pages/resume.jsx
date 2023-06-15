@@ -148,7 +148,6 @@ ${data.other}
           content="кофе, выпечка, завтраки, ежедневнё, 8:00 — 22:00"
         />
       </Head>
-      <Navbar />
       <div className="w-full">
         <h1 className="text-[24px] sm:text-[60px] text-center">Форма заявки</h1>
         <p className="text-[16px] opacity-50 text-center">

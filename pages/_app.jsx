@@ -1,12 +1,13 @@
 import "./../styles/global.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
+import Navbar from "../components/Navbar/Navbar";
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
     <AnimatePresence mode="wait">
       <motion.div
-      className="flex flex-col items-center"
+        className="w-full flex flex-col items-center"
         key={router.route}
         initial="initialState"
         animate="animateState"
@@ -22,10 +23,11 @@ export default function MyApp({ Component, pageProps }) {
           animateState: {
             opacity: "1",
           },
-          exitState: {
-          },
+          exitState: {},
         }}
       >
+        <Navbar />
+
         <Component {...pageProps} />
       </motion.div>
     </AnimatePresence>
