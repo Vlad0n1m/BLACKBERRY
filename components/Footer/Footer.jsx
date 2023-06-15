@@ -1,7 +1,11 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
+
 export default function Footer() {
   return (
-    <div className="flex justify-between text-white">
+    <div  
+      className="flex justify-between text-white"
+    >
       <div className="flex gap-[30px] items-end">
         <Link
           href="/"

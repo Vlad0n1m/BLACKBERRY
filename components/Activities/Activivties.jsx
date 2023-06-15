@@ -1,7 +1,13 @@
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+
 export default function Activivties() {
   return (
-    <div className="flex flex-col gap-[20px] text-white ">
+    <motion.div
+      initial={{ y: 100 }}
+      whileInView={{ y: 0 }}
+      className="flex flex-col gap-[20px] text-white "
+    >
       <h1 className="w-full text-center  text-[24px] sm:text-[48px] md:text-[54px] font-[500]">
         Что будем делать вместе?
       </h1>
@@ -15,7 +21,7 @@ export default function Activivties() {
           франшиза
         </Link>
         <Link
-        href="/coop"
+          href="/coop"
           id="shadow-down-green text-shadow"
           className="cursor-pointer flex grow-[1] justify-start text-[16px] sm:text-[33px] md:text-[50px] w-[90px] sm:w-[unset] leading-[100%] font-[600] items-end bg-[url('/images/collab.webp')] h-full  rounded-lg max-h-[90px] sm:max-h-[300px] aspect-square sm:aspect-[unset] sm:min-h-[300px] bg-center bg-cover p-[5px] sm:p-[12px]"
         >
@@ -37,6 +43,6 @@ export default function Activivties() {
           тебя
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }

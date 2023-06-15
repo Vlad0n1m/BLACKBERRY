@@ -1,6 +1,11 @@
+import { motion } from "framer-motion";
 export default function HeaderNav() {
   return (
-    <div className="flex-col  sm:flex-row flex gap-[8px] sm:gap-[21px] text-white">
+    <motion.div
+      initial={{ y: 100 }}
+      whileInView={{ y: 0 }}
+      className="flex-col  sm:flex-row flex gap-[8px] sm:gap-[21px] text-white"
+    >
       <div className="flex  w-full gap-[10px] md:gap-[21px]">
         <div className="flex items-start flex-col gap-[10px] w-fullgap-[10px] w-full  p-[12px] bg-[transparent] hover:bg-[#27272a] rounded-[10px]">
           <svg
@@ -142,6 +147,6 @@ export default function HeaderNav() {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

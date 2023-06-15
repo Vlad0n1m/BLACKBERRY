@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { motion } from "framer-motion";
 export default function Form() {
   const nameRef = useRef(null);
   const phoneRef = useRef(null);
@@ -9,8 +10,8 @@ export default function Form() {
       phone: phoneRef.current.value,
     };
     console.log(event.target);
-    event.target.reset()
-    event.target[2].innerHTML = "Отправлено!"
+    event.target.reset();
+    event.target[2].innerHTML = "Отправлено!";
     sendToTelegram(data);
   };
   const sendToTelegram = (data) => {
@@ -28,7 +29,11 @@ export default function Form() {
     });
   };
   return (
-    <div className=" rounded-lg flex flex-col bg-[#27272a] gap-[18px] text-white p-[18px]">
+    <motion.div
+      initial={{ y: 100 }}
+      whileInView={{ y: 0 }}
+      className=" rounded-lg flex flex-col bg-[#27272a] gap-[18px] text-white p-[18px]"
+    >
       <div className="flex gap-[30px] justify-between items-center">
         <h1 className="text-[19px] sm:text-[32px] font-[500]">
           Есть предложения или вопросы?
@@ -87,6 +92,6 @@ export default function Form() {
           Позвоните мне
         </button>
       </form>
-    </div>
+    </motion.div>
   );
 }
