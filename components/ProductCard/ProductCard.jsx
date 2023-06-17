@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 export default function ProductCard() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
@@ -9,15 +10,13 @@ export default function ProductCard() {
       id="products"
       ref={ref}
       className="flex-col md:flex-row flex gap-[8px] md:gap-[20px] md:justify-between text-white"
+      style={{
+        transform: isInView ? "none" : "translateY(100px)",
+        // opacity: isInView ? 1 : 0,
+        transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s",
+      }}
     >
-      <div
-        style={{
-          transform: isInView ? "none" : "translateX(-200px)",
-          // opacity: isInView ? 1 : 0,
-          transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s",
-        }}
-        className="w-full flex gap-[8px] md:gap-[20px] md:justify-between "
-      >
+      <div className="w-full flex gap-[8px] md:gap-[20px] md:justify-between ">
         <div className="flex flex-col w-full gap-[10px]">
           <h1 className="flex justify-center items-center bg-cover  md:text-[58px] bg-no-repeat bg-center w-[100%] text-[32px] aspect-square rounded-lg bg-[url('/images/coffe.webp')]">
             café
@@ -42,11 +41,6 @@ export default function ProductCard() {
         </div>
       </div>
       <div
-        style={{
-          transform: isInView ? "none" : "translateX(200px)",
-          // opacity: isInView ? 1 : 0,
-          transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
-        }}
         className="flex w-full  md:justify-between gap-[8px] md:gap-[20px]"
       >
         <div className="flex flex-col w-full gap-[10px]">

@@ -63,6 +63,8 @@
 #__next {
   @apply w-full flex justify-center items-center flex-col;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+
 }
 #container > * {
   @apply w-full;
@@ -117,11 +119,21 @@
 * {
   font-family: "Gilroy";
   transition: all 0.2s;
+
+}
+
+h1,
+p,
+h2,
+h3 {
+  leading-trim: both;
+  text-edge: cap;
 }
 
 body {
   background: #121212;
 }
+
 
 input:focus::placeholder,
 textarea:focus::placeholder {

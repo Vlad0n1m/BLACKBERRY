@@ -6,7 +6,8 @@ export default function People() {
   const ref = useRef(null);
       const isInView = useInView(ref, { once: true });
   return (
-    <div ref={ref}
+    <div
+      ref={ref}
       style={{
         transform: isInView ? "none" : "translateY(100px)",
         transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s",
@@ -14,6 +15,7 @@ export default function People() {
       className="flex w-full justify-between gap-[4px] sm:gap-[10px] md:gap-[20px] items-center"
     >
       <Image
+        
         src="/images/people1.webp"
         width="150"
         height="150"

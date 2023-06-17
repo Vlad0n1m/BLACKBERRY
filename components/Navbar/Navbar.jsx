@@ -2,12 +2,45 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Sling as Hamburger } from "hamburger-react";
+import { useRef } from "react";
+import Modal from "@mui/material/Modal";
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
   const variants = {
     open: { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" },
     closed: { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" },
   };
+  const [open, setOpenModal] = useState(false);
+  const handleOpen = () => setOpenModal(true);
+  const handleClose = () => setOpenModal(false);
+  const nameRef = useRef(null);
+  const phoneRef = useRef(null);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = {
+      name: nameRef.current.value,
+      phone: phoneRef.current.value,
+    };
+    console.log(event.target);
+    event.target.reset();
+    event.target[2].innerHTML = "Отправлено!";
+    sendToTelegram(data);
+  };
+  const sendToTelegram = (data) => {
+    const BOT_TOKEN = "5714870203:AAFuSUOXmFSC396MWCa68bf8DR5oUtixRuQ";
+    const CHAT_ID = "-1001941741315";
+    let message = `#перезвонить\n\n🥷 - ${data.name}\n\n☎️ - ${data.phone}`;
+
+    fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+      method: "POST",
+      headers: {
+        "X-Requested-With": "XMLHttpRequest",
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: `chat_id=${CHAT_ID}&text=${message}&parse_mode=html`,
+    });
+  };
+  const ref = useRef(null);
   return (
     <div className="w-[100%] max-w-[383px] sm:max-w-[947px] md:max-w-[1361px] flex flex-col gap-[60px] sm:gap-[120px] md:gap-[200px] text-white bg-[#121212] fixed py-3 z-10 ">
       <div className="flex items-center justify-between w-full bg-[#121212] px-[20px] lg:p-0">
@@ -18,12 +51,15 @@ export default function Navbar() {
         >
           BLACKБЕРИ
         </Link>
-        <a
-          className="hidden text-black text-[16px] w-[180px] h-[40px] bg-white sm:flex justify-center items-center rounded-lg font-[500]"
-          href="/"
+        <motion.a
+          whileTap={{
+            scale: 0.9,
+          }}
+          onClick={handleOpen}
+          className="hidden cursor-pointer hover:bg-black hover:border-white hover:border-[2px] hover:text-white text-black text-[16px] w-[180px] h-[40px] bg-white sm:flex justify-center items-center rounded-lg font-[500]"
         >
           Обратная связь
-        </a>
+        </motion.a>
         <div class="sm:hidden space-y-2" onClick={() => setOpen(!isOpen)}>
           <Hamburger toggled={isOpen} />
         </div>
@@ -147,50 +183,93 @@ export default function Navbar() {
               </svg>
             </a>
           </div>
-          <a
-            href="#form"
-            onClick={() => setOpen(!isOpen)}
+          <motion.a
+            whileTap={{
+              scale: 0.9,
+            }}
+            onClick={handleOpen}
             className="flex w-full justify-center items-center text-black bg-white rounded-lg font-[500] py-[14px] uppercase mt-[12px]"
           >
             Форма для обратной связи
-          </a>
-          <div className="flex items-center justify-between gap-[10px] my-[12px]">
-            <Link
-              onClick={() => setOpen(!isOpen)}
-              href="/franchise"
-              id="shadow-down-brown text-shadow"
-              className="cursor-pointer flex grow-[1] sm:grow-[2] justify-start text-[16px] sm:text-[33px] w-[90px] sm:w-[unset] md:text-[50px] font-[600] leading-[100%] items-end bg-[url('/images/franshisa.webp')] h-full  rounded-lg  max-h-[90px] sm:max-h-[300px] aspect-square sm:aspect-[unset] sm:min-h-[300px] bg-center bg-cover p-[5px] sm:p-[12px]"
-            >
-              наша <br />
-              франшиза
-            </Link>
-            <Link
-              onClick={() => setOpen(!isOpen)}
-              href="/coop"
-              id="shadow-down-green text-shadow"
-              className="cursor-pointer flex grow-[1] justify-start text-[16px] sm:text-[33px] md:text-[50px] w-[90px] sm:w-[unset] leading-[100%] font-[600] items-end bg-[url('/images/collab.webp')] h-full  rounded-lg max-h-[90px] sm:max-h-[300px] aspect-square sm:aspect-[unset] sm:min-h-[300px] bg-center bg-cover p-[5px] sm:p-[12px]"
-            >
-              со
-              <br />
-              труд
-              <br />
-              ничество
-            </Link>
-            <Link
-              onClick={() => setOpen(!isOpen)}
-              href="/resume"
-              id="shadow-down-white text-shadow"
-              className="cursor-pointer flex grow-[1] justify-start text-[16px] sm:text-[33px] md:text-[50px] w-[90px] sm:w-[unset] font-[600] leading-[100%]  items-end bg-[url('/images/job.webp')] h-full  rounded-lg  max-h-[90px] sm:max-h-[300px] aspect-square sm:aspect-[unset] sm:min-h-[300px] bg-center bg-cover p-[5px] sm:p-[12px]"
-            >
-              мы
-              <br />
-              ищем
-              <br />
-              тебя
-            </Link>
-          </div>
+          </motion.a>
         </div>
       </motion.div>
+      <Modal
+        className=""
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <div
+          id="form"
+          ref={ref}
+          className="absolute left-[10%] top-[30%] right-[10%] rounded-lg flex flex-col bg-[#27272a] gap-[18px] text-white p-[18px]"
+        >
+          <div className="flex gap-[30px] justify-between items-center md:justify-center">
+            <h1 className="text-[19px] sm:text-[32px] font-[500] text-center">
+              Есть предложения или вопросы?
+            </h1>
+            <svg
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="md:hidden"
+            >
+              <g clip-path="url(#clip0_483_2583)">
+                <path
+                  d="M22.3139 10.672L20.8989 12.086L20.1919 11.379L15.9499 15.621L15.2429 19.157L13.8279 20.571L9.58592 16.328L4.63592 21.278L3.22192 19.864L8.17192 14.914L3.92892 10.672L5.34292 9.25704L8.87992 8.55004L13.1219 4.30804L12.4149 3.60104L13.8289 2.18604L22.3139 10.672Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_483_2583">
+                  <rect
+                    width="24"
+                    height="24"
+                    fill="white"
+                    transform="translate(0 0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col items-center gap-[12px]"
+          >
+            <div className="flex flex-col items-center  gap-[8px] w-full">
+              <input
+                ref={nameRef}
+                type="text"
+                className="w-full md:w-[40%] py-[12px] px-[16px] text-black bg-[#E9E9E9] text-[12px] rounded-lg"
+                placeholder="Имя"
+                name="name"
+                required
+              />
+              <input
+                ref={phoneRef}
+                type="phone"
+                className="w-full md:w-[40%] py-[12px] px-[16px] text-black bg-[#E9E9E9] text-[12px] rounded-lg"
+                placeholder="Телефон"
+                name="phone"
+                required
+              />
+              <motion.button
+                whileTap={{
+                  scale: 0.9,
+                }}
+                type="submit"
+                className=" flex text-black text-[16px] w-full sm:w-[30%] h-[40px] bg-white justify-center items-center rounded-lg font-[500]"
+              >
+                Позвоните мне
+              </motion.button>
+            </div>
+          </form>
+        </div>
+      </Modal>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { Link as LinkScroll } from "react-scroll";
 export default function Header() {
   return (
     <div
@@ -109,15 +109,21 @@ export default function Header() {
         </div>
       </div>
       <div className="flex flex-row gap-[5px] sm:gap-[20px] justify-end items-center">
-        <a
-          href="#products"
+        <LinkScroll
+        whileTap={{
+            scale: 0.9,
+          }}
+          smooth={true}
+          offset={-75}
+          duration={500}
+          to="products"
           id="shadow-down-brown"
-          className="bg-cover hover:translate-y-3 drop-shadow-2xl rounded-lg w-[100%] aspect-square bg-center sm:w-[160px] sm:h-[160px] flex flex-col items-start justify-end sm:p-[11px] p-[10px] font-[500] sm:text-[32px] text-[16px] leading-[14.4px] sm:leading-[29px] text-white bg-[url('/images/header-card-1.webp')]"
+          className="cursor-pointer bg-cover hover:translate-y-3 drop-shadow-2xl rounded-lg w-[100%] aspect-square bg-center sm:w-[160px] sm:h-[160px] flex flex-col items-start justify-end sm:p-[11px] p-[10px] font-[500] sm:text-[32px] text-[16px] leading-[14.4px] sm:leading-[29px] text-white bg-[url('/images/header-card-1.webp')]"
         >
           готовим
           <br />
           vkusno!
-        </a>
+        </LinkScroll>
         <Link
           id="shadow-down-green"
           href="https://music.yandex.ru/users/nphne-4b26bgid/playlists/1000?utm_medium=copy_link"
