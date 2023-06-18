@@ -77,7 +77,7 @@ export default function Navbar() {
       <motion.div
         animate={isOpen ? "open" : "closed"}
         variants={variants}
-        className={`w-full h-screen absolute top-[68px] flex bg-[#121212] sm:hidden flex-col gap-[20px] items-start justify-center p-[10px] `}
+        className={`w-full h-screen absolute top-[68px] flex bg-[#121212] sm:hidden flex-col gap-[20px] items-start justify-start p-[10px] pt-11 `}
       >
         <div className="flex flex-col gap-[14px] w-full">
           <div>
