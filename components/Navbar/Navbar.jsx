@@ -1,15 +1,25 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Sling as Hamburger } from "hamburger-react";
 import { useRef } from "react";
 import Modal from "@mui/material/Modal";
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
+  useEffect(() => {
+    isOpen
+      ? document.body.classList.add("overflow-hidden")
+      : document.body.classList.remove("fixed");
+  }, [isOpen]);
+
   const variants = {
     open: { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" },
     closed: { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" },
   };
+  // document.body.classList.add("home-layout");
+  // return () => {
+  //   document.body.classList.remove("home-layout");
+  // };
   const [open, setOpenModal] = useState(false);
   const handleOpen = () => setOpenModal(true);
   const handleClose = () => setOpenModal(false);
@@ -238,9 +248,9 @@ export default function Navbar() {
           </div>
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col items-center gap-[12px]"
+            className="flex flex-col items-center gap-[20px]"
           >
-            <div className="flex flex-col items-center  gap-[8px] w-full">
+            <div className="flex flex-col items-center gap-[20px] w-full">
               <input
                 ref={nameRef}
                 type="text"

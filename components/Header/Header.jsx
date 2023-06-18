@@ -18,7 +18,10 @@ export default function Header() {
           GREAT
         </h1>
         <div className="hidden sm:flex items-center flex-col gap-[15px]">
-          <a href="/" className=" opacity-10 hover:opacity-100">
+          <a
+            href="https://t.me/bb_coffee"
+            className=" opacity-10 hover:opacity-100"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="44"
@@ -41,7 +44,10 @@ export default function Header() {
               </defs>
             </svg>
           </a>
-          <a href="/" className=" opacity-10 hover:opacity-100">
+          <a
+            href="https://www.instagram.com/bb_petropavl/"
+            className=" opacity-10 hover:opacity-100"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="44"
@@ -110,7 +116,7 @@ export default function Header() {
       </div>
       <div className="flex flex-row gap-[5px] sm:gap-[20px] justify-end items-center">
         <LinkScroll
-        whileTap={{
+          whileTap={{
             scale: 0.9,
           }}
           smooth={true}

@@ -1,8 +1,10 @@
+"use client"
+
 import Image from "next/image";
 import { useState } from "react";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-
+import Location from "./Location";
 export default function LocationBlock() {
   const [ActiveTab, SetActive] = useState(1);
   const TabClicked = (index) => {
@@ -11,7 +13,8 @@ export default function LocationBlock() {
       const ref = useRef(null);
       const isInView = useInView(ref, { once: true });
   return (
-    <div ref={ref}
+    <div
+      ref={ref}
       style={{
         transform: isInView ? "none" : "translateY(100px)",
         transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s",
@@ -89,31 +92,81 @@ export default function LocationBlock() {
         <div
           className={
             ActiveTab == 1
-              ? "flex h-[100%] sm:w-[40%] flex-col p-[12px] gap-[12px] bg-[#27272a] items-start w-full rounded-lg"
-              : "flex h-[100%] sm:w-[40%] flex-col-reverse p-[12px] gap-[12px] bg-[#27272a] items-start w-full rounded-lg"
+              ? "flex h-full sm:min-h-[300px] sm:w-[40%] flex-col p-[12px] gap-[12px] bg-[#27272a] items-start w-full rounded-lg"
+              : "hidden  h-[100%] sm:w-[40%]  p-[12px] gap-[12px] bg-[#27272a] items-start w-full rounded-lg"
           }
         >
-          <p className="text-white md:text-[20px] font-400 text-[16px]">
-            ул. Горького, 179
-          </p>
-          <p className="text-white md:text-[20px] font-400 text-[16px]">
-            ул. Назарбаева, 116а
-          </p>
-          <p className="text-white md:text-[20px] font-400 text-[16px]">
-            ул. Интернациональная, 43
-          </p>
-          <p className="text-white md:text-[20px] font-400 text-[16px]">
-            ул. Интернациональная, 24
-          </p>
-          <p className="text-white md:text-[20px] font-400 text-[16px]">
-            ул. Жумабаева, 91
-          </p>
-          <p className="text-white md:text-[20px] font-400 text-[16px]">
-            ул. Сатпаева, 38
-          </p>
-          <p className="text-white md:text-[20px] font-400 text-[16px]">
-            ул. Уалиханова, 56
-          </p>
+          <Location
+            name="ул. Горького, 179"
+            feature1={true}
+            feature2={false}
+            feature3={true}
+            feature4={true}
+          />
+          <Location
+            name="ул. Назарбаева, 116а"
+            feature1={false}
+            feature2={false}
+            feature3={true}
+            feature4={true}
+          />
+          <Location
+            name="ул. Интернациональная, 43"
+            feature1={true}
+            feature2={true}
+            feature3={true}
+            feature4={true}
+          />
+          <Location
+            name="ул. Интернациональная, 24"
+            feature1={true}
+            feature2={false}
+            feature3={true}
+            feature4={true}
+          />
+          <Location
+            name="ул. Жумабаева, 91"
+            feature1={true}
+            feature2={false}
+            feature3={true}
+            feature4={false}
+          />
+          <Location
+            name="ул. Сатпаева, 38"
+            feature1={false}
+            feature2={true}
+            feature3={true}
+            feature4={true}
+          />
+          <Location
+            name="ул. Уалиханова, 56"
+            feature1={true}
+            feature2={true}
+            feature3={true}
+            feature4={true}
+          />
+        </div>
+        <div
+          className={
+            ActiveTab == 2
+              ? "flex h-[100%] sm:min-h-[306px] sm:w-[40%] flex-col p-[12px] gap-[12px] bg-[#27272a] items-start w-full rounded-lg"
+              : "hidden  h-[100%] sm:w-[40%]  p-[12px] gap-[12px] bg-[#27272a] items-start w-full rounded-lg"
+          }
+        >
+          <Location
+            name="ул. Мухтара Ауэзова, 189Б"
+            feature1={true}
+            feature2={false}
+            feature3={true}
+            feature4={true}
+          />
+          <Location
+            name="пр. Назарбаева, 100"
+            feature1={false}
+            feature2={false}
+            feature3={true}
+            feature4={true}
+          />
         </div>
       </div>
     </div>
