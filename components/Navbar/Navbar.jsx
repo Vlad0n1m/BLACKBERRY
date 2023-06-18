@@ -9,7 +9,7 @@ export default function Navbar() {
   useEffect(() => {
     isOpen
       ? document.body.classList.add("overflow-hidden")
-      : document.body.classList.remove("fixed");
+      : document.body.classList.remove("overflow-hidden");
   }, [isOpen]);
 
   const variants = {
