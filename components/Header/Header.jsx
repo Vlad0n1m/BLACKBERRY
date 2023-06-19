@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <div
       id="radial-header"
-      className="rounded-lg p-[10px] sm:p-[15px] h-[80vh] sm:max-h-[480px] flex flex-col justify-between"
+      className="rounded-lg p-[10px] mb-[40px] sm:p-[15px] h-[80vh] sm:max-h-[480px] flex flex-col justify-between"
     >
       <div className="flex flex-row justify-between items-start">
         <h1
@@ -116,7 +116,7 @@ export default function Header() {
       </div>
       <div className="flex flex-row gap-[5px] sm:gap-[20px] justify-end items-center">
         <LinkScroll
-            
+
           smooth={true}
           offset={-75}
           duration={500}
