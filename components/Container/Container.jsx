@@ -3,7 +3,7 @@ export default function Container({ children }) {
   return (
     <div
       id="container"
-      className=" w-[95%] max-w-[380px] sm:max-w-[945px] md:max-w-[1360px] mb-[20px] md:mb-[24px] flex flex-col gap-[60px] sm:gap-[120px] md:gap-[200px] text-white mt-[89px] sm:mt-[149px]"
+      className="overflow-hidden w-[95%] max-w-[380px] sm:max-w-[945px] md:max-w-[1360px] mb-[20px] md:mb-[24px] flex flex-col gap-[60px] sm:gap-[120px] md:gap-[200px] text-white mt-[89px] sm:mt-[149px]"
     >
       <Head>
         <link

@@ -169,3 +169,16 @@ div:focus-within > p {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(left, #676767, #b0b0b0);
 }
+
+#marque {
+  animation: marque 2000s linear infinite;
+}
+
+@keyframes marque {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10000%)
+  }
+}
