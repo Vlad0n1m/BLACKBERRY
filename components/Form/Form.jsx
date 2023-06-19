@@ -1,5 +1,6 @@
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { motion } from "framer-motion";
 export default function Form() {
   const nameRef = useRef(null);
   const phoneRef = useRef(null);
@@ -32,7 +33,7 @@ export default function Form() {
   const isInView = useInView(ref, { once: true });
   return (
     <div
-    id="form"
+      id="form"
       ref={ref}
       style={{
         transform: isInView ? "none" : "translateY(50px)",
@@ -91,12 +92,15 @@ export default function Form() {
             required
           />
         </div>
-        <button
+        <motion.button
+          whileTap={{
+            scale: 0.9,
+          }}
           type="submit"
-          className=" flex text-black text-[16px] w-[100%] sm:w-[30%] h-[40px] bg-white justify-center items-center rounded-lg font-[400]"
+          className=" flex text-black text-[16px] w-[100%] sm:w-[30%] h-[40px] bg-white justify-center items-center rounded-lg font-[500]"
         >
           Позвоните мне
-        </button>
+        </motion.button>
       </form>
     </div>
   );

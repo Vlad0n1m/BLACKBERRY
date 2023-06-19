@@ -14,12 +14,13 @@ export default function LocationBlock() {
       const isInView = useInView(ref, { once: true });
   return (
     <div
+    id="locations"
       ref={ref}
       style={{
         transform: isInView ? "none" : "translateY(100px)",
         transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s",
       }}
-      className="flex flex-col gap-[0px] justify-center items-center"
+      className="flex flex-col gap-[10px] justify-center items-center"
     >
       <div className="w-full flex flex-col sm:flex-row gap-[16px] sm:justify-between text-white items-center">
         <div className="flex gap-[4px] items-center justify-center">

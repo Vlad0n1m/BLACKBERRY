@@ -116,9 +116,7 @@ export default function Header() {
       </div>
       <div className="flex flex-row gap-[5px] sm:gap-[20px] justify-end items-center">
         <LinkScroll
-          whileTap={{
-            scale: 0.9,
-          }}
+            
           smooth={true}
           offset={-75}
           duration={500}
