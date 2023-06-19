@@ -171,14 +171,19 @@ div:focus-within > p {
 }
 
 #marque {
-  animation: marque 2000s linear infinite;
+  animation: marque 20s linear infinite;
+
 }
+
+/* #marque:hover {
+  animation-play-state: paused;
+} */
 
 @keyframes marque {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-10000%)
+    transform: translateX(-100%)
   }
 }
