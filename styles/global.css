@@ -79,7 +79,7 @@
       rgba(29, 29, 29, 0.86) 100%
     ),
     url(/images/header-bg.webp), #000000;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   @apply rounded-lg p-[10px] sm:p-[15px] bg-center sm:bg-cover;
 }
@@ -186,4 +186,10 @@ div:focus-within > p {
   100% {
     transform: translateX(-100%)
   }
+}
+
+#modal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

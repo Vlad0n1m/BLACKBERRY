@@ -205,19 +205,18 @@ export default function Navbar() {
         </div>
       </motion.div>
       <Modal
-        className=""
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
         <div
-          id="form"
+          id="modal"
           ref={ref}
-          className="absolute left-[10%] top-[30%] right-[10%] rounded-lg flex flex-col bg-[#27272a] gap-[18px] text-white p-[18px]"
+          className="absolute w-[80%] sm:w-[unset] rounded-lg flex flex-col bg-[#27272a] gap-[18px] text-white p-[18px]"
         >
           <div className="flex gap-[30px] justify-between items-center md:justify-center">
-            <h1 className="text-[19px] sm:text-[32px] font-[500] text-center">
+            <h1 className="text-[23px] sm:text-[32px] font-[500] text-center">
               Есть предложения или вопросы?
             </h1>
             <svg
@@ -254,7 +253,7 @@ export default function Navbar() {
               <input
                 ref={nameRef}
                 type="text"
-                className="w-full md:w-[40%] py-[12px] px-[16px] text-black bg-[#E9E9E9] text-[12px] rounded-lg"
+                className="w-full py-[12px] px-[16px] text-black bg-[#E9E9E9] text-[12px] rounded-lg"
                 placeholder="Имя"
                 name="name"
                 required
@@ -262,7 +261,7 @@ export default function Navbar() {
               <input
                 ref={phoneRef}
                 type="phone"
-                className="w-full md:w-[40%] py-[12px] px-[16px] text-black bg-[#E9E9E9] text-[12px] rounded-lg"
+                className="w-full  py-[12px] px-[16px] text-black bg-[#E9E9E9] text-[12px] rounded-lg"
                 placeholder="Телефон"
                 name="phone"
                 required
@@ -272,7 +271,7 @@ export default function Navbar() {
                   scale: 0.9,
                 }}
                 type="submit"
-                className=" flex text-black text-[16px] w-full sm:w-[30%] h-[40px] bg-white justify-center items-center rounded-lg font-[400]"
+                className=" flex text-black text-[16px] w-full h-[40px] bg-white justify-center items-center rounded-lg font-[400]"
               >
                 Позвоните мне
               </motion.button>
