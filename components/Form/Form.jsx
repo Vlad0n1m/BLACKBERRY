@@ -93,7 +93,7 @@ export default function Form() {
         </div>
         <button
           type="submit"
-          className=" flex text-black text-[16px] w-[100%] sm:w-[30%] h-[40px] bg-white justify-center items-center rounded-lg font-[500]"
+          className=" flex text-black text-[16px] w-[100%] sm:w-[30%] h-[40px] bg-white justify-center items-center rounded-lg font-[400]"
         >
           Позвоните мне
         </button>

@@ -4,12 +4,12 @@ export default function Header() {
   return (
     <div
       id="radial-header"
-      className="rounded-lg p-[10px] sm:p-[15px] min-h-[450px] sm:min-h-[480px] flex flex-col justify-between"
+      className="rounded-lg p-[10px] sm:p-[15px] h-[80vh] sm:max-h-[480px] flex flex-col justify-between"
     >
       <div className="flex flex-row justify-between items-start">
         <h1
           id="text-shadow"
-          className="font-[700] text-[45px] leading-[46px] sm:text-[60px] sm:leading-[61px] text-white"
+          className="font-[500] text-[45px] leading-[46px] sm:text-[60px] sm:leading-[61px] text-white"
         >
           MAKE
           <br />

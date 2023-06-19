@@ -79,7 +79,9 @@
       rgba(29, 29, 29, 0.86) 100%
     ),
     url(/images/header-bg.webp), #000000;
-  @apply rounded-lg p-[10px] sm:p-[15px] bg-center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  @apply rounded-lg p-[10px] sm:p-[15px] bg-center sm:bg-cover;
 }
 #radial {
   background: linear-gradient(-155deg, rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.49)),

@@ -19,7 +19,7 @@ export default function LocationBlock() {
         transform: isInView ? "none" : "translateY(100px)",
         transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s",
       }}
-      className="flex flex-col gap-[20px] justify-center items-center"
+      className="flex flex-col gap-[0px] justify-center items-center"
     >
       <div className="w-full flex flex-col sm:flex-row gap-[16px] sm:justify-between text-white items-center">
         <div className="flex gap-[4px] items-center justify-center">
@@ -82,7 +82,7 @@ export default function LocationBlock() {
           </p>
         </div>
       </div>
-      <div className="w-full sm:max-h-[340px] flex flex-col sm:flex-row gap-[20px] justify-center items-center">
+      <div className="w-full sm:max-h-[340px] flex flex-col sm:flex-row gap-[20px] justify-center items-start">
         <Image
           src="/images/location.webp"
           width="500"
@@ -149,7 +149,7 @@ export default function LocationBlock() {
         <div
           className={
             ActiveTab == 2
-              ? "flex h-[100%] sm:min-h-[306px] sm:w-[40%] flex-col p-[12px] gap-[12px] bg-[#27272a] items-start w-full rounded-lg"
+              ? "flex h-[100%] sm:w-[40%] flex-col p-[12px] gap-[12px] bg-[#27272a] items-start w-full rounded-lg"
               : "hidden  h-[100%] sm:w-[40%]  p-[12px] gap-[12px] bg-[#27272a] items-start w-full rounded-lg"
           }
         >

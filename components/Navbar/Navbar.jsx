@@ -66,12 +66,12 @@ export default function Navbar() {
             scale: 0.9,
           }}
           onClick={handleOpen}
-          className="hidden cursor-pointer hover:bg-black hover:border-white hover:border-[2px] hover:text-white text-black text-[16px] w-[180px] h-[40px] bg-white sm:flex justify-center items-center rounded-lg font-[500]"
+          className="hidden cursor-pointer hover:bg-black hover:border-white hover:border-[2px] hover:text-white text-black text-[16px] w-[180px] h-[40px] bg-white sm:flex justify-center items-center rounded-lg font-[400]"
         >
           Обратная связь
         </motion.a>
         <div class="sm:hidden space-y-2" onClick={() => setOpen(!isOpen)}>
-          <Hamburger toggled={isOpen} />
+          <Hamburger size={28} toggled={isOpen} />
         </div>
       </div>
       <motion.div
@@ -198,7 +198,7 @@ export default function Navbar() {
               scale: 0.9,
             }}
             onClick={handleOpen}
-            className="flex w-full justify-center items-center text-black bg-white rounded-lg font-[500] py-[14px] uppercase mt-[12px]"
+            className="flex w-full justify-center items-center text-black bg-white rounded-lg font-[400] py-[14px] uppercase mt-[12px]"
           >
             Форма для обратной связи
           </motion.a>
@@ -272,7 +272,7 @@ export default function Navbar() {
                   scale: 0.9,
                 }}
                 type="submit"
-                className=" flex text-black text-[16px] w-full sm:w-[30%] h-[40px] bg-white justify-center items-center rounded-lg font-[500]"
+                className=" flex text-black text-[16px] w-full sm:w-[30%] h-[40px] bg-white justify-center items-center rounded-lg font-[400]"
               >
                 Позвоните мне
               </motion.button>
