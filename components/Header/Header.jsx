@@ -13,7 +13,7 @@ export default function Header() {
         >
           MAKE
           <br />
-          KAZAHSTAN
+          KAZAKHSTAN
           <br />
           GREAT
         </h1>

@@ -54,7 +54,7 @@ export default function Navbar() {
   };
   const ref = useRef(null);
   return (
-    <div className="w-[100%] py-3 z-10 text-white flex flex-col items-center bg-[#121212] fixed">
+    <div className="w-[100%] z-10 text-white flex flex-col items-center bg-[#121212] fixed">
       <div className="w-[100%] max-w-[383px] sm:max-w-[947px] md:max-w-[1361px] flex flex-col gap-[60px] sm:gap-[120px] md:gap-[200px]  py-3 z-40 ">
         <div className="flex items-center justify-between w-full bg-[#121212] px-[20px] lg:p-0 z-40">
           <Link
@@ -65,9 +65,7 @@ export default function Navbar() {
             BLACKБЕРИ
           </Link>
           <motion.a
-            whileTap={{
-              scale: 0.9,
-            }}
+             
             onClick={handleOpen}
             className="hidden cursor-pointer hover:bg-black hover:border-white hover:border-[2px] hover:text-white text-black text-[16px] w-[180px] h-[40px] bg-white sm:flex justify-center items-center rounded-lg font-[500]"
           >
