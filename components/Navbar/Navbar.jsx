@@ -55,7 +55,7 @@ export default function Navbar() {
   const ref = useRef(null);
   return (
     <div className="w-[100%] z-10 text-white flex flex-col items-center bg-[#121212] fixed">
-      <div className="w-[100%] max-w-[383px] sm:max-w-[947px] md:max-w-[1361px] flex flex-col gap-[60px] sm:gap-[120px] md:gap-[200px]  py-3 z-40 ">
+      <div className="w-[100%] max-w-[383px] sm:max-w-[947px] md:max-w-[1361px] flex flex-col gap-[60px] sm:gap-[120px] md:gap-[200px]  py-1 z-40 ">
         <div className="flex items-center justify-between w-full bg-[#121212] px-[20px] lg:p-0 z-40">
           <Link
             href="/"
